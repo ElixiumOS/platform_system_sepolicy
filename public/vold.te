@@ -36,6 +36,7 @@ allow vold block_device:dir create_dir_perms;
 allow vold device:dir write;
 allow vold devpts:chr_file rw_file_perms;
 allow vold rootfs:dir mounton;
+allow vold labeledfs:filesystem { relabelfrom };
 allow vold sdcard_type:dir mounton; # TODO: deprecated in M
 allow vold sdcard_type:filesystem { mount remount unmount }; # TODO: deprecated in M
 allow vold sdcard_posix:filesystem { relabelto relabelfrom };
