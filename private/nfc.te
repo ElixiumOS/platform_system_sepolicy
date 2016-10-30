@@ -12,6 +12,10 @@ hal_client_domain(nfc, hal_nfc)
 allow nfc nfc_data_file:dir create_dir_perms;
 allow nfc nfc_data_file:notdevfile_class_set create_file_perms;
 
+# Beam image transfer
+allow nfc media_rw_data_file:dir create_dir_perms;
+allow nfc media_rw_data_file:file create_file_perms;
+
 # SoundPool loading and playback
 allow nfc audioserver_service:service_manager find;
 allow nfc drmserver_service:service_manager find;
